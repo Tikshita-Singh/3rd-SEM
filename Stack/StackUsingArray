@@ -1,0 +1,73 @@
+#include<stdio.h>
+#define size 5;
+int Stack[5];
+int top = -1;
+
+void Push()
+{
+    int n;
+    if(top == 5-1)
+    {
+         printf("Stack OverFlow");
+         return;
+    }
+    printf("Enter the value to push");
+    scanf("%d",&n);
+    top = top + 1;
+    Stack[top] = n ;
+}
+void Status()
+{
+    printf("Stack is now");
+    for(int i = top;i >= 0;i--)
+    {
+        printf("\n %d",Stack[i]);
+    }
+}
+void Pop()
+{
+    if(top == -1)
+    {
+        printf("Stack UnderFlow");
+        return;
+    }
+    printf("%d is Popped",Stack[top]);
+    top = top-1;
+}
+void Peek()
+{
+    if(top == -1)
+    {
+        printf("Satck is empty");
+    }
+    else
+    {
+        printf("Top value is %d",Stack[top]);
+    }
+}
+
+int main()
+{
+    int ch;
+    do
+    {
+        printf("\n :- MENU:-\n=====");
+        printf("\n1..........Push......");
+        printf("\n2..........Pop......");
+        printf("\n3..........Push......");
+        printf("\n4..........Peek......");
+        printf("\n5..........Exit......");
+        printf("\n Enter Choice");
+        scanf("%d",&ch);
+        switch(ch)
+        {
+            case 1: Push();
+                    break;
+            case 2: Status();
+                    break;
+            case 3: Pop();
+                    break;
+        }
+    }
+    while(ch != 5);
+}
