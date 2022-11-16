@@ -1,5 +1,6 @@
 // Time Complexity---->>>   Best Case: O(N)
-//                          Worst Case:O(N*N)
+//                          Worst Case:O(N^2)
+//Space Complexity--->>>  O(1)
 
 
 
