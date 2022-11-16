@@ -1,3 +1,8 @@
+// Time Complexity---->>>   Best Case: O(N)
+//                          Worst Case:O(N*N)
+
+
+
 package sorting;
 
 public class BubbleSort {
